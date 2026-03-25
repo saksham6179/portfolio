@@ -65,7 +65,7 @@ const projects = [
     github: "https://github.com/saksham6179/Life-Cycle-Assesment-Tool"
   },
   {
-    title: "Trie Phone Directory",
+    title: "Trie-Based Phone Directory",
     image: "/project2.jpg",
     desc: "Efficient prefix-based search using Trie.",
     github: "https://github.com/saksham6179/phone_directory_using_trie_data_structure"
