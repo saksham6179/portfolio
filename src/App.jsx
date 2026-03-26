@@ -73,7 +73,7 @@ function JellyCursor() {
           type === "interactive"
             ? 1.4
             : type === "text"
-            ? 0.90
+            ? 0.85
             : moving
             ? 1.25
             : 1,
@@ -135,18 +135,18 @@ const skills = [
 ];
 
 const techStack = [
-  { name: "React", icon: <FaReact />, color: "#61DBFB" },
-  { name: "Node.js", icon: <FaNodeJs />, color: "#68A063" },
+  { name: "Python", icon: <FaPython />, color: "#3776AB" },
+  { name: "C++", icon: <SiCplusplus />, color: "#00599C" },
+  { name: "Java", icon: <FaJava />, color: "#f89820" },
   { name: "JavaScript", icon: <SiJavascript />, color: "#f7df1e" },
-  { name: "MongoDB", icon: <SiMongodb />, color: "#4DB33D" },
-  { name: "MySQL", icon: <SiMysql />, color: "#00758F" },
+  { name: "Kotlin", icon: <SiKotlin />, color: "#A97BFF" },
   { name: "HTML", icon: <FaHtml5 />, color: "#E34C26" },
   { name: "CSS", icon: <FaCss3Alt />, color: "#264de4" },
-  { name: "Java", icon: <FaJava />, color: "#f89820" },
-  { name: "Python", icon: <FaPython />, color: "#3776AB" },
+  { name: "React", icon: <FaReact />, color: "#61DBFB" },
+  { name: "Node.js", icon: <FaNodeJs />, color: "#68A063" },
   { name: "PHP", icon: <FaPhp />, color: "#8993be" },
-  { name: "C++", icon: <SiCplusplus />, color: "#00599C" },
-  { name: "Kotlin", icon: <SiKotlin />, color: "#A97BFF" }
+  { name: "MySQL", icon: <SiMysql />, color: "#00758F" },
+  { name: "MongoDB", icon: <SiMongodb />, color: "#4DB33D" }
 ];
 
 const techConfig = {
@@ -192,12 +192,12 @@ export default function App() {
       {/* NAVBAR */}
       <motion.nav initial={{ y: -80 }} animate={{ y: 0 }}
         className="fixed w-full flex justify-between px-8 py-4 backdrop-blur-xl z-50">
-        <h1 className="font-bold">Saksham Fulse</h1>
+        <h1 className="font-bold bg-gradient-to-r from-white to-gray-200 text-transparent inline-block bg-clip-text">Saksham Fuls<span className="text-orange-400">e</span></h1>
         <div className="flex gap-6 text-sm">
           {["About","Skills","Technologies","Projects","Contact"].map((i)=>(
             <a key={i} href={`#${i.toLowerCase()}`} className="relative group px-1 transition transform hover:scale-105 cursor-text-element">
               {i}
-              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </div>
@@ -209,7 +209,7 @@ export default function App() {
           initial={{ opacity:0,y:60 }}
           animate={{ opacity:1,y:0 }}
           transition={{ duration:1.2 }}
-          className="text-8xl font-extrabold bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text"
+          className="text-8xl font-extrabold bg-gradient-to-r from-white via-gray-200 to-gray-400 text-transparent inline-block bg-clip-text"
         >
           Saksham Fulse
         </motion.h1>
@@ -223,9 +223,9 @@ export default function App() {
         className="min-h-screen flex items-center px-6 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text">
-              About Me
-            </h2>
+           <h2 className="text-5xl mb-4 mt-12 font-bold bg-gradient-to-r from-white to-gray-300 text-transparent inline-block bg-clip-text">
+            About M<span className="text-orange-400">e</span>
+          </h2>
             <p className="text-gray-300 text-lg leading-relaxed">
               My name is <span className="text-white font-semibold">Saksham Fulse</span>. I am from Latur, Maharashtra and currently pursuing a B.Tech in Computer Science at Lovely Professional University.
 
@@ -240,8 +240,8 @@ export default function App() {
 
       {/* SKILLS */}
       <section id="skills" className="min-h-screen flex flex-col justify-center px-6">
-        <h2 className="text-5xl text-center mb-16 font-bold bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text">
-          Skills
+        <h2 className="text-5xl text-center mb-16 font-bold bg-gradient-to-r from-white to-gray-200 text-transparent inline-block bg-clip-text">
+          Skill<span className="text-orange-400">s</span>
         </h2>
 
         <motion.div variants={stagger} initial="hidden" whileInView="show"
@@ -267,8 +267,8 @@ export default function App() {
 
       {/* TECHNOLOGIES */}
       <section id="technologies" className="min-h-screen flex flex-col justify-center px-6">
-        <h2 className="text-5xl text-center mb-16 font-bold bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text">
-          Technologies
+        <h2 className="text-5xl text-center p-2 mb-12 font-bold bg-gradient-to-r from-white to-gray-200 text-transparent inline-block bg-clip-text">
+          Technologie<span className="text-orange-400">s</span>
         </h2>
 
         <motion.div variants={stagger} initial="hidden" whileInView="show"
@@ -293,8 +293,8 @@ export default function App() {
 
       {/* PROJECTS */}
       <section id="projects" className="min-h-screen flex flex-col justify-center px-6">
-        <h2 className="text-5xl text-center mb-16 font-bold bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text">
-          Projects
+        <h2 className="text-5xl text-center p-2 mb-14 font-bold bg-gradient-to-r from-white to-gray-200 text-transparent inline-block bg-clip-text">
+          Project<span className="text-orange-400">s</span>
         </h2>
 
         <motion.div variants={stagger} initial="hidden" whileInView="show"
@@ -352,7 +352,7 @@ export default function App() {
 
           <div className="bg-white text-black p-10 rounded-2xl relative">
             <h2 className="text-4xl font-bold mb-6">
-              Contact Me<span className="text-orange-500">.</span>
+              Connect with me<span className="text-orange-500">.</span>
             </h2>
             <p className="text-gray-700 mb-6">
               I will read all emails. Send me any message you want and I'll get back to you.
@@ -362,12 +362,6 @@ export default function App() {
             </p>
 
             <div className="flex flex-wrap gap-4 mt-4">
-              {/* Download CV */}
-              <a href="/sakshamFulseCV.pdf" download
-                className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">
-                Download CV
-              </a>
-
               {/* GitHub */}
               <a href="https://github.com/saksham6179" target="_blank"
                className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">
@@ -379,12 +373,17 @@ export default function App() {
                 className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">
                 LinkedIn
               </a>
+              {/* Download CV */}
+               <a href="/sakshamFulseCV.pdf" download
+                className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-black rounded-lg transition">
+                Download CV
+              </a>
 
             </div>
           </div>
 
           <div className="bg-black p-10 rounded-2xl border border-gray-800">
-            <h3 className="text-xl font-semibold mb-6">Send Me A Message</h3>
+            <h3 className="text-xl font-semibold mb-6">Send Me A Messag<span className="text-orange-400">e</span></h3>
 
             <div className="grid grid-cols-2 gap-4 mb-4">
               <input type="text" placeholder="First Name"
@@ -399,7 +398,7 @@ export default function App() {
             <textarea placeholder="Message" rows="5"
               className="w-full p-3 mb-6 bg-transparent border border-gray-700 rounded outline-none focus:border-white"/>
 
-            <button className="px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded text-white transition">
+            <button className="px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded text-black transition">
               Send Message
             </button>
           </div>
